@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hexa</string>
+    <string name="signage_spec_title">사이니지 스펙</string>
+    <string name="need_signage_info">정보 입력이 필요합니다</string>
+    <string name="cabinet_spec_title">캐비닛 스펙</string>
+    <string name="need_cabinet_info">사이트의 캐비닛 정보</string>
+    <string name="analyze_photo">사진 분석</string>
+    <string name="analyze_video">영상 분석</string>
+</resources>
