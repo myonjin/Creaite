@@ -2,10 +2,7 @@ package D6B.D_discover_picture.picture.domain;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Builder
 @AllArgsConstructor
@@ -14,13 +11,22 @@ import javax.persistence.Id;
 @Setter
 @ToString
 @Entity
+@Table(name = "picture")
 public class Picture {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
-    private String imgUrl;
-    private Long makerId;
-    private Boolean isPublic;
-    private Long likeCount;
 
+    @Column(name = "img_url")
+    private String imgUrl;
+
+    @Column(name = "maker_id")
+    private Long makerId;
+
+    @Column(name = "is_public")
+    private Boolean isPublic;
+
+    @Column(name = "like_count")
+    private Long likeCount;
 }
