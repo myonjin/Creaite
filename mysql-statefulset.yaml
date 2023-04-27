@@ -32,13 +32,16 @@ spec:
               mountPath: /var/lib/mysql
   volumeClaimTemplates:
     - metadata:
-        name: mysql-persistent-storage
-      spec:
-        accessModes: ["ReadWriteOnce"]
-        storageClassName: "manual"
-        resources:
-          requests:
-            storage: 20Gi
+      name: mysql-persistent-storage
+  spec:
+    accessModes: ["ReadWriteOnce"]
+    resources:
+      requests:
+        storage: 20Gi
+    storageClassName: manual
+    selector:
+      matchLabels:
+        app: mysql
 ---
 apiVersion: v1
 kind: Service
