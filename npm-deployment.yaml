@@ -53,3 +53,21 @@ spec:
       targetPort: 443
       name: https
   type: LoadBalancer
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-proxy-manager
+spec:
+  rules:
+    - host: hexa-backenders.com
+      http:
+        paths:
+          - path: /npm
+            pathType: Prefix
+            backend:
+              service:
+                name: nginx-proxy-manager
+                port:
+                  name: http
