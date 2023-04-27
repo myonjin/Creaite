@@ -21,7 +21,7 @@ spec:
             - name: JAVA_OPTS
               value: -Djenkins.install.runSetupWizard=false
           ports:
-            - containerPort: 9090
+            - containerPort: 8080
               name: http
             - containerPort: 50000
               name: agent
@@ -43,6 +43,6 @@ spec:
     app: jenkins
   ports:
     - protocol: TCP
-      port: 9090
-      targetPort: 9090
+      port: 8080
+      targetPort: 8080
   type: LoadBalancer
