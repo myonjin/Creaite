@@ -12,6 +12,8 @@ spec:
       labels:
         app: nginx-proxy-manager
     spec:
+      securityContext:
+        runAsUser: 0
       containers:
         - name: nginx-proxy-manager
           image: jc21/nginx-proxy-manager:latest
