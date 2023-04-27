@@ -12,6 +12,8 @@ spec:
       labels:
         app: jenkins
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - name: jenkins
           image: jenkins/jenkins:lts
@@ -30,6 +32,7 @@ spec:
         - name: jenkins-home
           persistentVolumeClaim:
             claimName: jenkins-pv-claim
+
 ---
 apiVersion: v1
 kind: Service
