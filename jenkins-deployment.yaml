@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins
+  namespace: dev
 spec:
   replicas: 2
   selector:
@@ -38,6 +39,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: jenkins
+  namespace: dev
 spec:
   selector:
     app: jenkins
@@ -52,9 +54,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: jenkins-ingress
+  namespace: dev
 spec:
   rules:
-    - host: jenkins.hexa-backenders.com
+    - host: dev.hexa-backenders.com
       http:
         paths:
           - path: /
