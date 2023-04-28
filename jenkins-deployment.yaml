@@ -48,22 +48,3 @@ spec:
       port: 8080
       targetPort: 8080
   type: LoadBalancer
-
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: jenkins-ingress
-  namespace: dev
-spec:
-  rules:
-    - host: dev.hexa-backenders.com
-      http:
-        paths:
-          - path: /jenkins
-            pathType: Prefix
-            backend:
-              service:
-                name: jenkins
-                port:
-                  number: 8080
