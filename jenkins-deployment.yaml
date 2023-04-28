@@ -60,7 +60,7 @@ spec:
     - host: dev.hexa-backenders.com
       http:
         paths:
-          - path: /
+          - path: /jenkins
             pathType: Prefix
             backend:
               service:
