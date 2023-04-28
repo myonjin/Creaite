@@ -61,7 +61,7 @@ metadata:
   name: nginx-proxy-manager
 spec:
   rules:
-    - host: hexa-backenders.com
+    - host: dev.hexa-backenders.com
       http:
         paths:
           - path: /npm
