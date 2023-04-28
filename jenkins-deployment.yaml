@@ -51,16 +51,16 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: jenkins
+  name: jenkins-ingress
 spec:
   rules:
-    - host: hexa-backenders.com
+    - host: jenkins.hexa-backenders.com
       http:
         paths:
-          - path: /jenkins
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: jenkins
                 port:
-                  name: http
+                  number: 8080
