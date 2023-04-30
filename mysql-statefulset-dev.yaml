@@ -1,12 +1,13 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: mysql
+  name: mysql-dev
+  namespace: dev
 spec:
   selector:
     matchLabels:
       app: mysql
-  serviceName: mysql
+  serviceName: mysql-dev
   replicas: 1
   template:
     metadata:
@@ -38,7 +39,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-svc
+  name: mysql-svc-dev
+  namespace: dev
   labels:
     app: mysql
 spec:
