@@ -10,6 +10,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: standard
+  storageClassName: aws-ebs-sc
   hostPath:
     path: "/mnt/mysql"
