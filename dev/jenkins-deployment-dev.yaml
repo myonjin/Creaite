@@ -47,33 +47,3 @@ spec:
       port: 8080
       targetPort: 8080
   type: LoadBalancer
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: jenkins-staging
-  namespace: staging
-spec:
-  selector:
-    app: jenkins
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
-  type: LoadBalancer
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: jenkins-prod
-  namespace: prod
-spec:
-  selector:
-    app: jenkins
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
-  type: LoadBalancer
