@@ -8,6 +8,5 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: manual
   hostPath:
     path: /data/jenkins
