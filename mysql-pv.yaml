@@ -10,5 +10,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
   hostPath:
     path: "/mnt/mysql"
