@@ -15,7 +15,6 @@ spec:
                 name: jenkins-dev
                 port:
                   number: 8080
-                  type: LoadBalancer
           - path: /db
             pathType: Prefix
             backend:
@@ -23,4 +22,3 @@ spec:
                 name: mysql-dev
                 port:
                   number: 3306
-                  type: LoadBalancer 
