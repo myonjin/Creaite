@@ -33,6 +33,7 @@ spec:
     - metadata:
         name: jenkins-home
       spec:
+        storageClassName: aws-ebs-sc
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
