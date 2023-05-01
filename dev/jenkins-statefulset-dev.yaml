@@ -1,8 +1,9 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: jenkins
 spec:
+  serviceName: "jenkins"
   replicas: 2
   selector:
     matchLabels:
@@ -28,10 +29,14 @@ spec:
           volumeMounts:
             - name: jenkins-home
               mountPath: /var/jenkins_home
-      volumes:
-        - name: jenkins-home
-          persistentVolumeClaim:
-            claimName: jenkins-pv-claim
+  volumeClaimTemplates:
+    - metadata:
+        name: jenkins-home
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 1Gi
 
 ---
 apiVersion: v1
