@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: jenkins-dev
-  namespace:dev
+  namespace: dev
 spec:
   serviceName: "jenkins-dev"
   replicas: 2
@@ -39,6 +39,7 @@ spec:
         resources:
           requests:
             storage: 1Gi
+
 ---
 apiVersion: v1
 kind: Service
