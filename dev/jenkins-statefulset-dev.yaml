@@ -28,13 +28,12 @@ spec:
             - containerPort: 50000
               name: agent
           volumeMounts:
-            - mountPath: /var/lib/mysql
-              name: mysql-persistent-storage
+            - name: jenkins-home
+              mountPath: /var/jenkins_home
   volumeClaimTemplates:
     - metadata:
-        name: mysql-persistent-storage
+        name: jenkins-home
       spec:
-        storageClassName: aws-ebs-sc
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
