@@ -28,28 +28,9 @@ spec:
             - containerPort: 50000
               name: agent
           volumeMounts:
-            - name: jenkins-home
-              mountPath: /var/jenkins_home
-  volumeClaimTemplates:
-    - metadata:
-        name: jenkins-home
-      spec:
-        accessModes: ["ReadWriteOnce"]
-        resources:
-          requests:
-            storage: 1Gi
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: jenkins-dev
-  namespace: dev
-spec:
-  selector:
-    app: jenkins
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
-  type: LoadBalancer
+            - mountPath: /var/jenkins_home
+              name: jenkins-persistent-storage
+      volumes:
+        - name: jenkins-persistent-storage
+          persistentVolumeClaim:
+            claimName: jenkins-pv-claim

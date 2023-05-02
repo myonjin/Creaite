@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-svc-dev
+  namespace: dev
+  labels:
+    app: jenkins
+spec:
+  ports:
+    - protocol: TCP
+      port: http
+      targetPort: http
+  selector:
+    app: jenkins
+  type: LoadBalancer
