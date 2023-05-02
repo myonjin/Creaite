@@ -34,19 +34,3 @@ spec:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
             claimName: mysql-pv-claim
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: mysql-svc-dev
-  namespace: dev
-  labels:
-    app: mysql
-spec:
-  ports:
-    - name: mysql
-      port: 3306
-  selector:
-    app: mysql
-  type: LoadBalancer
