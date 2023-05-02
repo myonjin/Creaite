@@ -3,10 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: jenkins-pv-claim
 spec:
-storageClassName: aws-ebs-sc
+  storageClassName: aws-ebs-sc
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 10Gi
-  
