@@ -19,25 +19,17 @@ spec:
       containers:
         - name: jenkins
           image: jenkins/jenkins:lts
-          command:
-            - '/bin/bash'
-            - '-c'
-          args:
-            - "/usr/local/bin/jenkins-plugin-cli --verbose --plugins \
-              github:1.33.1 \
-              workflow-aggregator:2.6 \
-              docker-workflow:1.26 \
-              kubernetes:1.30.1 \
-              git:4.8.2"
-          ports:
-            - containerPort: 8080
-            - containerPort: 50000
-          volumeMounts:
-            - name: jenkins-persistent-storage
-              mountPath: /var/jenkins_home
           env:
             - name: JAVA_OPTS
-              value: '-Djenkins.install.runSetupWizard=true'
+              value: -Djenkins.install.runSetupWizard=false
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 50000
+              name: agent
+          volumeMounts:
+            - mountPath: /var/jenkins_home
+              name: jenkins-persistent-storage
       volumes:
         - name: jenkins-persistent-storage
           persistentVolumeClaim:
