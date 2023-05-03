@@ -4,7 +4,7 @@ metadata:
   name: jenkins-dev
   namespace: dev
 spec:
-  serviceName: "jenkins-dev"
+  serviceName: 'jenkins-dev'
   replicas: 1
   selector:
     matchLabels:
@@ -21,7 +21,7 @@ spec:
           image: jenkins/jenkins:lts
           env:
             - name: JAVA_OPTS
-              value: -Djenkins.install.runSetupWizard=false
+              value: -Djenkins.install.runSetupWizard=true
           ports:
             - containerPort: 8080
               name: http
