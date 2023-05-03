@@ -4,6 +4,7 @@ metadata:
   name: jenkins-pv
   labels:
     name: jenkins
+    customLabel: jenkins-pv
 spec:
   capacity:
     storage: 8Gi
