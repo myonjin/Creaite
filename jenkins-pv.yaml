@@ -11,6 +11,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: aws-ebs-sc
+  storageClassName: ebs-sc
   hostPath:
     path: '/data/jenkins'
