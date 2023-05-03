@@ -33,12 +33,12 @@ spec:
           command: ['/bin/bash', '-c']
           args:
             - |
-              /usr/local/bin/jenkins-plugin-cli --verbose --latest-specified --plugins \
-                github \
-                workflow-aggregator \
-                docker-workflow \
-                kubernetes \
-                git
+              /usr/local/bin/jenkins-plugin-cli --verbose --plugins \
+                  github:1.33.1 \
+                  workflow-aggregator:2.6 \
+                  kubernetes-cd:2.0.0 \
+                  docker-workflow:1.26 \
+                  git:4.8.2
       volumes:
         - name: jenkins-persistent-storage
           persistentVolumeClaim:
