@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+piVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: jenkins-dev
@@ -19,26 +19,25 @@ spec:
       containers:
         - name: jenkins
           image: jenkins/jenkins:lts
-          env:
-            - name: JAVA_OPTS
-              value: -Djenkins.install.runSetupWizard=true
+          command:
+            - '/bin/bash'
+            - '-c'
+          args:
+            - "/usr/local/bin/jenkins-plugin-cli --verbose --plugins \
+              github:1.33.1 \
+              workflow-aggregator:2.6 \
+              docker-workflow:1.26 \
+              kubernetes:1.30.1 \
+              git:4.8.2"
           ports:
             - containerPort: 8080
-              name: http
             - containerPort: 50000
-              name: agent
           volumeMounts:
-            - mountPath: /var/jenkins_home
-              name: jenkins-persistent-storage
-          command: ['/bin/bash', '-c']
-          args:
-            - |
-              /usr/local/bin/jenkins-plugin-cli --verbose --plugins \
-                  github:1.33.1 \
-                  workflow-aggregator:2.6 \
-                  kubernetes-cd:2.0.0 \
-                  docker-workflow:1.26 \
-                  git:4.8.2
+            - name: jenkins-persistent-storage
+              mountPath: /var/jenkins_home
+          env:
+            - name: JAVA_OPTS
+              value: '-Djenkins.install.runSetupWizard=true'
       volumes:
         - name: jenkins-persistent-storage
           persistentVolumeClaim:
