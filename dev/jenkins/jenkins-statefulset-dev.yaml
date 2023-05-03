@@ -16,6 +16,22 @@ spec:
     spec:
       securityContext:
         runAsUser: 0
+      initContainers:
+        - name: install-plugins
+          image: jenkins/jenkins:lts
+          command:
+            - '/bin/bash'
+            - '-c'
+            - |
+              /usr/local/bin/install-plugins.sh \
+                github \
+                workflow-aggregator \
+                docker-workflow \
+                kubernetes \
+                git
+          volumeMounts:
+            - name: jenkins-persistent-storage
+              mountPath: /var/jenkins_home
       containers:
         - name: jenkins
           image: jenkins/jenkins:lts
@@ -28,8 +44,8 @@ spec:
             - containerPort: 50000
               name: agent
           volumeMounts:
-            - mountPath: /var/jenkins_home
-              name: jenkins-persistent-storage
+            - name: jenkins-persistent-storage
+              mountPath: /var/jenkins_home
       volumes:
         - name: jenkins-persistent-storage
           persistentVolumeClaim:
