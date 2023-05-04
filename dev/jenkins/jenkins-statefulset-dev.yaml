@@ -4,7 +4,7 @@ metadata:
   name: jenkins-dev
   namespace: dev
 spec:
-  serviceName: 'jenkins-dev'
+  serviceName: "jenkins-dev"
   replicas: 1
   selector:
     matchLabels:
@@ -18,15 +18,12 @@ spec:
         runAsUser: 0
       containers:
         - name: jenkins
-          image: jenkins/jenkins:lts
+          image: jenkins/jenkins:lts-jdk11
           env:
             - name: JAVA_OPTS
-              value: -Djenkins.install.runSetupWizard=false
+              value: -Djenkins.install.runSetupWizard=true
           ports:
             - containerPort: 8080
-              name: http
-            - containerPort: 50000
-              name: agent
           volumeMounts:
             - mountPath: /var/jenkins_home
               name: jenkins-persistent-storage
