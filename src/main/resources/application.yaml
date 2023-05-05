@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root:
+      INFO
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        # dev
+        - id: user-service-dev
+          uri: http://user-service.dev.svc.cluster.local # 쿠버네티스 서비스의 FQDN
+          predicates:
+            - Path=/user/**
+  profiles:
+    active: dev
+
+#        - id: alarm-service-prod
+#          uri: https://alarm.ssafy.shop
+#          predicates:
+#            - Host=api.ssafy.shop
+#            - Path=/alarm/**
+#          filters:
+#            - RewritePath=/(?<segment>.*), /$\{segment}
