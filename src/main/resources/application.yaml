@@ -17,11 +17,3 @@ spring:
             - Path=/user/**
   profiles:
     active: dev
-
-#        - id: alarm-service-prod
-#          uri: https://alarm.ssafy.shop
-#          predicates:
-#            - Host=api.ssafy.shop
-#            - Path=/alarm/**
-#          filters:
-#            - RewritePath=/(?<segment>.*), /$\{segment}
