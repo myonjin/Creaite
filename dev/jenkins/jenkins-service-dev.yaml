@@ -7,10 +7,11 @@ metadata:
     app: jenkins
 spec:
   ports:
-    - protocol: TCP
-      port: 8080
+    - port: 8080
+      name: http
       targetPort: 8080
     - port: 50000
+      name: slave
       targetPort: 50000
   selector:
     app: jenkins
