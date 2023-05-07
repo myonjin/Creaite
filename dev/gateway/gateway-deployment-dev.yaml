@@ -4,7 +4,6 @@ metadata:
   name: gateway-dev
   namespace: dev
 spec:
-  serviceName: 'gateway-dev'
   replicas: 1
   selector:
     matchLabels:
