@@ -30,6 +30,9 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: mysql-persistent-storage
+            - mountPath: /etc/mysql
+              name: mysql-config
+              readOnly: true
       volumes:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
