@@ -1,14 +1,7 @@
 ### dev/
 
-- 구축 중
+- 완료
 
-### staging/
-
-- 구축 예정
-
-### prod/
-
-- 구축 예정
 
 ### aws-ebs-sc.yaml
 
