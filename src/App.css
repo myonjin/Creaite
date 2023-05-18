@@ -7,6 +7,11 @@
   /* margin: 10px; */
 }
 
+.imageReadyStyle {
+  height: 80px;
+  cursor: pointer;
+}
+
 .headerStyle {
   align-items: flex-start;
 }

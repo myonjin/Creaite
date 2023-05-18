@@ -20,13 +20,20 @@ function App() {
       <br />
       <br />
       <div className="boxStyle">
-        <a href="">
+        <a href="https://onesto.re/0000769538">
           <img src={oneDown} className="imageStyle" />
         </a>
         <div className="box"></div>
-        <a href="">
+        {/* <a href="">
           <img src={apkDown} className="imageStyle" />
-        </a>
+        </a> */}
+        <img
+          src={apkDown}
+          onClick={() => {
+            alert("준비중입니다!");
+          }}
+          className="imageReadyStyle"
+        />
       </div>
       <br />
       <br />
