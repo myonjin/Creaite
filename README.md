@@ -1,5 +1,5 @@
 # Site
-![image.png](./sources/image.png)
+<img src="./sources/image.png" width="45%" height="35%">
 - https://home.hexa-backenders.com/
 
 
@@ -63,87 +63,85 @@
 
 ## Home
 ### Today's Pick
-    ![home.jpg](./sources/home.jpg)
+<img src="./sources/home.jpg" width="35%" height="35%">
+    
 
 ### Monthly
-    ![monthly.jpg](./sources/monthly.jpg)
+<img src="./sources/monthly.jpg" width="35%" height="35%">
 
 ### FloatingButton
-    ![fdd.jpg](./sources/fdd.jpg)
+<img src="./sources/fdd.jpg" width="35%" height="35%">
 
 ## Detail
-### ![이미지디테일.jpg](./이미지디테일.jpg)
+<img src="./sources/이미지디테일.jpg" width="35%" height="35%">
 
 ## Notification
 ### push message
-    ![pushnoti.jpg](./sources/pushnoti.jpg)
+<img src="./sources/pushnoti.jpg" width="35%" height="35%">    
 
 ### in app message
-    ![pushnotilist.jpg](./sources/pushnotilist.jpg)
+<img src="./sources/pushnotilist.jpg" width="35%" height="35%">    
 
 ## Search
-### ![검색결과.jpg](./검색결과.jpg)
+<img src="./sources/검색결과.jpg" width="35%" height="35%">
 
 ## ProfilePage
 ### myworks
-    ![profile_my.jpg](./sources/profile_my.jpg)
+<img src="./sources/profile_my.jpg" width="35%" height="35%">
+
 
 ### likes
-    ![profile_like.jpg](./sources/profile_like.jpg)
+<img src="./sources/profile_like.jpg" width="35%" height="35%">
 
 ## Text2Image
-### selection
-    ![gen_select.jpg](./sources/gen_select.jpg)
-
 ### generation activity
-    ![image_gen1.jpg](./sources/image_gen1.jpg)
+<img src="./sources/image_gen1.jpg" width="35%" height="35%">
 
 ### text input
-    ![image_gen_text_input.jpg](./sources/image_gen_text_input.jpg)
+<img src="./sources/image_gen_text_input.jpg" width="35%" height="35%">
 
 ### example result
-    ![image_gen_ex_result.jpg](./sources/image_gen_ex_result.jpg)
+<img src="./sources/image_gen_ex_result.jpg" width="35%" height="35%">
 
 ## Edit
 ### selection
-    ![edit_select.jpg](./sources/edit_select.jpg)
+<img src="./sources/edit_select.jpg" width="35%" height="35%">
 
 ### base edit
-    ![base_edit.jpg](./sources/base_edit.jpg)
+<img src="./sources/base_edit.jpg" width="35%" height="35%">
 
 ### face swap
 - 1. source
-    ![face_source.jpg](./sources/face_source.jpg)
+<img src="./sources/face_source.jpg" width="35%" height="35%">
 
 - 2. target
-    ![face_target.jpg](./sources/face_target.jpg)
+<img src="./sources/face_target.jpg" width="35%" height="35%">
 
 - 3. result
-    ![face_result.jpg](./sources/face_result.jpg)
+<img src="./sources/face_result.jpg" width="35%" height="35%">
 
 ### AI Reinforcements
 - one function of them (Deblur)
 - 1. before
-    ![blur_before.jpg](./sources/blur_before.jpg)
+<img src="./sources/blur_before.jpg" width="35%" height="35%">
 
-- 2. after 
-    ![blur_after.jpg](./sources/blur_after.jpg)
+- 2. after
+<img src="./sources/blur_after.jpg" width="35%" height="35%">
 
 ### Change Style
 - 1. before
-    ![style_change_before.jpg](./sources/style_change_before.jpg)
+<img src="./sources/style_change_before.jpg" width="35%" height="35%">
+
 
 - 2. after
-    ![style_change_after.jpg](./sources/style_change_after.jpg)
+<img src="./sources/style_change_after.jpg" width="35%" height="35%">
+    
 
 ### Super Resolution
 - 1. before
-    ![srBefore.jpg](./sources/srBefore.jpg)
-    ![pixel_before.jpg](./sources/pixel_before.jpg)
+<img src="./sources/srBefore.jpg" width="35%" height="35%">
+<img src="./sources/pixel_before.jpg" width="35%" height="35%">
 
 - 2. after
-    ![srAfter.jpg](./sources/srAfter.jpg)
-    ![pixel_after.jpg](./pixel_after.jpg)
-
-### Loading Screen
-    ![loading.jpg](./sources/loading.jpg)
+<img src="./sources/srAfter.jpg" width="35%" height="35%">
+<img src="./sources/pixel_after.jpg" width="35%" height="35%">
